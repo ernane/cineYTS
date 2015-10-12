@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <title>CineYTS - Filmes</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="CineYTS - Filmes Torrents HD">
+  <meta name="author" content="Ernane Sena">
+  <%= stylesheet_link_tag 'application', media: nil, 'data-turbolinks-track' => true %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+  <div id="navbar" class="navbar navbar-inverse navbar-fixed-top">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="index.html"><%= image_tag("logo.png", alt: "logo") %>ORIGAMI</a>
+    </div>
+    <div class="collapse navbar-collapse">
+      <ul class="nav navbar-nav">
+        <!-- This hidden one just makes scrollspy reset when going above the team section -->
+        <li style="display: none;"><a href="#home"></a></li>
+        <li><a class="scroll" href="#team"><i class="icon-user"></i>TEAM<span class="arrow-left"></span></a></li>
+        <li><a class="scroll" href="#services"><i class="icon-gear"></i>SERVICES<span class="arrow-left"></span></a></li>
+        <li><a class="scroll" href="#work"><i class="icon-briefcase"></i>WORK<span class="arrow-left"></span></a></li>
+        <li><a class="scroll" href="#pricing"><i class="icon-dollar"></i>PRICING<span class="arrow-left"></span></a></li>
+        <li><a class="scroll" href="#contact"><i class="icon-comments"></i>CONTACT<span class="arrow-left"></span></a></li>
+        <li><a href="features.html"><i class="icon-plus"></i>FEATURES<span class="arrow-left"></span></a></li>
+      </ul>
+    </div><!--/.nav-collapse -->
+  </div>
+  <div class="search">
+    <i class="icon-search"></i>
+
+    <form id="search" class="form-inline" role="form">
+      <div class="form-group">
+        <input type="text" class="form-control" id="exampleSearch">
+      </div>
+    </form>
+  </div>
+  <%= yield %>
+  <div id="footer" class="section">
+    <p>Made by <a href="http://webdesigncrowd.com">WebDesignCrowd</a></p>     
+  </div>
+
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+</body>
+</html>
