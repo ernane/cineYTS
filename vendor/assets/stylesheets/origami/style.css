@@ -1315,6 +1315,10 @@ label {
 
 #team { }
   
+  #team .container {
+    margin: 0 0 100px 0;
+  }
+
   #team .team-portrait { text-align: center; }
   
   #team .title {

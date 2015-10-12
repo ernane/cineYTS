@@ -73,7 +73,7 @@
     $("#navbar ul.navbar-nav li a.scroll").click(function(e) {
       e.preventDefault();
       var offset = $(this.hash).offset().top;
-      if ($(this).attr("href") != "#home") {
+      if ($(this).attr("href") != "#team") {
         offset += 100;
       } 
       $('html, body').animate({ scrollTop: offset }, 400);
