@@ -1,6 +1,6 @@
 class FilmeYTS
   include HTTParty
-  base_uri 'https://yts.to/api/v2'
+  base_uri 'https://yts.ag/api/v2'
 
   def self.getAll(params = {})
     options = { query: { limit: params[:limit], page: params[:page] } }
